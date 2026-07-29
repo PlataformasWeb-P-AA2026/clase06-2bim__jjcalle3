@@ -43,3 +43,9 @@ class NumeroTelefonicoAdmin(admin.ModelAdmin):
     raw_id_fields = ('estudiante',)
 
 admin.site.register(NumeroTelefonico, NumeroTelefonicoAdmin)
+class DireccionAdmin(admin.ModelAdmin):
+    list_display = ('descripcion', 'tipo', 'estudiante')
+    
+    raw_id_fields = ('estudiante',)
+
+admin.site.register(Direccion, DireccionAdmin)
